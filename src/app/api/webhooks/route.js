@@ -64,6 +64,9 @@ export async function POST(req) {
         email_addresses,
         username
       );
+      return new Response ('User is created or updated', {
+        status: 200,
+      });
     } catch (error) {
       console.log('Error creating or updating user:', error);
       return new Response ('Error occured', {
